@@ -1,0 +1,14 @@
+
+{% include 'base.html' %}
+{% block content %}
+<div class="text-center">
+  
+    <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      
+      <div class="result">{{result.as_p}}</div>
+      <button type="submit" >Submit  </button>
+      
+    </form>
+  </div>
+{% endblock %}

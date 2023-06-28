@@ -1,0 +1,31 @@
+{% include 'base.html' %}
+{% block content %}
+ 
+
+<div class="text-center">
+  
+    <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+
+
+      
+      <div class="result">{{result}}</div>
+      <button type="submit" >Send Querry </button>
+        <h1 style="text-decoration: underline; text-emphasis-color: green; text-transform: capitalize;">{{p}}</h1>
+
+
+      
+    </form>
+  </div>
+
+
+<div class="text-center">
+ <h3>Mobile Number :- <span style="color: rgb(1, 24, 24); font-weight: bold;">898487847887</span></h3>
+ <h3>EMail :- <span style="color: rgb(1, 24, 24); font-weight: bold;">satdvhdh@gmail.com <h3>info@hfejn.com</h3></span></h3>
+ <h3>Linkdin :- <span style="color: rgb(1, 24, 24); font-weight: bold;">linkdin/dedundj/sdbusj</span></h3>
+ <h3>facebook :- <span style="color: rgb(1, 24, 24); font-weight: bold;">fbfnjnjdnkj</span></h3>
+
+</div>
+
+{% endblock %}

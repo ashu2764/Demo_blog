@@ -1,0 +1,97 @@
+{% include 'base.html' %}
+{% block content %}
+<style>
+  
+  body{
+    margin: 0px;
+    background-image: linear-gradient( to left,rgb(125, 134, 208), rgb(216, 216, 227),rgb(55, 55, 212));
+    box-sizing: border-box;
+  }
+
+  .container{
+    margin-top: 5px;
+  
+  }
+  .container,text{
+    padding:10px;
+    font-family: sans-serif;
+
+  
+  }
+   h1{
+     text-align: center;
+    font-size: 3.5rem;
+    padding-left: 100px;
+
+  }
+   .description{
+    display: flex;
+    
+    width: 600px;
+    height: auto;
+    display: flex;
+    float:right;
+    padding-left: 30px;
+   }
+   #image{
+    display: flex;
+    float: left;
+    position:static;
+    margin-top: 20px;
+   }
+   .submit{
+    display: flex;
+  
+   
+    margin-top: 180vh;
+    padding-left: 120vh;
+  
+   }
+   .submit,text{
+    font-size: 1.2rem;
+   }
+
+   .line {
+    align-self: center;
+   }
+
+
+   /* form design */
+   .result {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center ;
+    
+
+    
+   }
+   
+
+
+
+</style>
+
+
+
+
+
+
+  
+  <div class="container">
+    {% for i in data %}
+    <h1 >{{i.heading}}</h1>   
+    <article class="description"> {{i.description}}</article>
+    <aside id="image"><img src="{{i.image.url}}" alt=""></aside>
+    
+        <footer class="submit"> <B style="text-transform: capitalize;">submitted by :-</B> <i style="font-family:cursive;">{{i.submit}}</i> </footer>
+        
+        {% endfor %}
+        <hr>
+      </div>
+      
+      
+      {% endblock %}
+      
+      
+ 
